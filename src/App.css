@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div,p, h1, h2, h3, h4, h5, h6 {
+ 
+  word-break: break-all;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background-color: #eee;
+}
+/*App*/
+.App{
+  width:80%;
+  margin:1rem auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:1rem;
 }
 
-.App-link {
-  color: #61dafb;
+
+/*Form*/
+.hidden{
+  visibility: collapse;
+}
+input,select{
+  height:2rem;
+  border:1px solid black;  
+  outline:none;
+}
+input:focus,
+select:focus{
+  border:2px solid blue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-inside{
+  border:1px solid black;  
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  gap:.2rem;
+  margin-bottom: .6rem;
+}
+.input-inside{
+  display: flex;
+  align-items: center; 
+}
+.input-inside input{
+  flex:1;
+  border:none;
+}
+.input-inside input:focus{
+  outline:none;
+  border:none;
+}
+
+.input-container:focus-within .input-inside {
+  border: 2px solid blue;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+  gap:.6rem;
+}
+.btn{
+  font-size: 1.1rem;
+  border:none;
+  border-radius: 5px;
+  cursor:pointer;
+  color:#fff;
+  background-color: #000;
+}
+.btn:hover{
+  color:#000;
+  background-color: #eee;
+}
+
+.btn:focus{
+  border:none;  
+}
+
+
+
+
+/*Table*/
+table{
+  width:100%;
+  padding-bottom: 1rem;
+  text-align: right;
+  border-bottom: 5px solid #000;
+}
+table tr:nth-child(2n){
+  background-color: #b9b7b3;    
+}
+
+table thead{
+  background-color: #000;
+  color:#fff;
+  text-align: center;
+}
+td{
+  padding:.1rem;
+}
+
+
+/*Toggle Switch*/
+.toggle-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.toggle-label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 25px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+.toggle-label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + .toggle-label {
+	background: #bada55;
+}
+
+input:checked + .toggle-label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.toggle-label:active:after {
+	width: 30px;
 }
