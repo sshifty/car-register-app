@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/car-register-app/static/css/main.bf88f6d0.css",
+    "main.js": "/car-register-app/static/js/main.71001238.js",
+    "index.html": "/car-register-app/index.html",
+    "main.bf88f6d0.css.map": "/car-register-app/static/css/main.bf88f6d0.css.map",
+    "main.71001238.js.map": "/car-register-app/static/js/main.71001238.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf88f6d0.css",
+    "static/js/main.71001238.js"
+  ]
+}
